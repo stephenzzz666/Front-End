@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* 🌑 Dark Mode Base: Deep Navy/Black and Soft White */
+  color: #e2e8f0; 
+  background-color: #020617; /* Tailwind Slate-950 */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 1. THE LAYOUT: Keeping your full-width fix but applying the dark theme */
+body {
+  margin: 0;
+  display: block; 
+  width: 100%;
+  min-height: 100vh;
+  background-color: #020617;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Scrollbar Styling: Custom blue scrollbar for that premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* 3. Reset default button styles */
+button {
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+/* 4. Link styling: Vibrant Blue for Dark Mode */
+a {
+  font-weight: 500;
+  color: #60a5fa; /* Lighter blue for better contrast on dark */
+  text-decoration: inherit;
+}
+a:hover {
+  color: #3b82f6;
+}
+
+/* 5. Headings: Clean and modern */
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
