@@ -1,25 +1,72 @@
-email: steph@gmail.com
-pass: 123
+# IT15/L — Integrative Programming Final Project
+## Academic Service Management System (Full-Stack)
 
+## 📺 1. Video Demonstration
+**Project Walkthrough:** 👉 https://drive.google.com/drive/folders/1-3rr2huyQ4eETJ-z9IbUnIu6VidZGs9Q?usp=drive_link
+*This video demonstrates the full system functionality, including authentication and live API integration.*
 
+---
 
-# React + Vite
+## 📸 2. Project Screenshots
+### Secure Login System (Requirement 1.2)
+![Login](./screenshots/login.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Dashboard Overview (Requirement 1.3)
+![Dashboard](./screenshots/dashboard.png)
 
-Currently, two official plugins are available:
+### Student Analytics Visualization (Requirement 1.3)
+![Charts](./screenshots/charts.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tagum City Weather Integration (Requirement 1.4)
+![Weather](./screenshots/weather.png)
 
-## React Compiler
+### Mobile Responsive Layout (Requirement 3.2)
+![Responsiveness](./screenshots/responsiveness.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📡 3. API Documentation
+### Internal Endpoints (Laravel Backend)
+| Endpoint | Method | Description | Response |
+| :--- | :--- | :--- | :--- |
+| `/api/login` | POST | Authenticates user | Bearer Token + User Data |
+| `/api/dashboard/stats` | GET | Data for Enrollment/Course charts | JSON Object |
+| `/api/students` | GET | List of 500+ student records | JSON Array |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### External Integration (OpenWeatherMap)
+* **Status:** Fully Functional
+* **Location:** Tagum City, PH
+* **Features:** Current temperature, humidity, and 5-day weather forecast with visual icons.
 
+---
 
-email: steph@gmail.com
-pass: 123
+## 🚀 4. Technologies Used
+* **Frontend:** React.js (v18), Axios, Recharts, Tailwind CSS / Bootstrap.
+* **Backend:** Laravel (v10), PHP (v8.2), Laravel Sanctum.
+* **Database:** MySQL (v8.0) with 500+ seeded records.
+* **External APIs:** OpenWeatherMap API.
+
+---
+
+## 🛠️ 5. Setup Instructions
+
+### Backend Setup (Laravel)
+1. `cd laravel-backend`
+2. `composer install`
+3. `cp .env.example .env` (Configure your database credentials)
+4. `php artisan key:generate`
+5. `php artisan migrate --seed`
+6. `php artisan serve`
+
+### Frontend Setup (React)
+1. `cd react-frontend`
+2. `npm install`
+3. Create a `.env` file and add: `VITE_WEATHER_API_KEY=your_api_key_here`
+4. `npm run dev`
+
+---
+
+## 🔐 6. Security & Best Practices
+* **Route Protection:** Implemented middleware to protect dashboard routes.
+* **Environment Security:** All API keys and sensitive credentials are excluded from Git via `.gitignore`.
+* **Responsive Design:** Utilized CSS grid and flexbox to ensure 100% mobile compatibility.
