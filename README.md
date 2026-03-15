@@ -63,6 +63,8 @@
 2. `npm install`
 3. Create a `.env` file and add: `VITE_WEATHER_API_KEY=your_api_key_here`
 4. `npm run dev`
+5. **Email:** `steph@gmail.com`
+   **Password:** `123`
 
 ---
 
