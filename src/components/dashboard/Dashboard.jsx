@@ -68,7 +68,7 @@ export default function Dashboard() {
             <p className="text-slate-400 font-medium">Academic Year 2025-2026 Overview</p>
           </div>
           <div className="bg-slate-800/50 p-1 rounded-2xl border border-slate-700">
-            <WeatherWidget city="Manila" />
+            <WeatherWidget city="Tagum" />
           </div>
         </div>
 
